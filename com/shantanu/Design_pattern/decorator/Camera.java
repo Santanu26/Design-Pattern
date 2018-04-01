@@ -2,6 +2,7 @@ package com.shantanu.Design_pattern.decorator;
 
 import java.awt.Color;
 import java.util.function.Function;
+import java.util.stream.Stream;
 
 @SuppressWarnings("unchecked")
 public class Camera {
@@ -10,8 +11,9 @@ public class Camera {
 		setFilter(filters);
 	}
 	public void setFilter(Function<Color , Color> ... filters) {
-		// whatever you gave me i gave to you....
-		filter = color -> color;
+		filter = Stream.of(filters)
+				.reduce(color->color,
+				  (theFilters , aFilter) -> theFilters.andThen(aFilter));
 	}
 	public Color snap(Color color) {
 		return filter.apply(color);

@@ -1,4 +1,4 @@
-package com.shantanu.Design_pattern;
+package com.shantanu.Design_pattern.strategy;
 
 import java.util.Arrays;
 import java.util.List;

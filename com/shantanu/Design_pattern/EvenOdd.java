@@ -14,7 +14,8 @@ public class EvenOdd {
 		}*/
 		return numbers.stream()
 				.filter(selectors)
-				.reduce(0, Integer :: sum);
+				.mapToInt(e->e)
+				.sum();
 	}
 
 	public static void main(String[] args) {

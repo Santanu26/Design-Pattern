@@ -13,6 +13,8 @@ public class SimpleIncrement {
 
 		doWork(3, inc);
 		doWork(3, doubleIt);
+	    doWork(3, inc.andThen(doubleIt));
+	
 	}
 
 }

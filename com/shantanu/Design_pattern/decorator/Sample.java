@@ -7,6 +7,7 @@ public class Sample {
 		System.out.println(camera.snap(new Color(125, 125, 125)));
 	}
 	
+	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		printSnap(new Camera());
 	}

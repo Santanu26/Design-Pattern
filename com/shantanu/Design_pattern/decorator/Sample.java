@@ -10,5 +10,7 @@ public class Sample {
 	@SuppressWarnings("unchecked")
 	public static void main(String[] args) {
 		printSnap(new Camera());
+		printSnap(new Camera(Color :: brighter));
+		printSnap(new Camera(Color:: darker));
 	}
 }
